@@ -215,11 +215,11 @@ class _SignupScreenState extends State<SignupScreen> {
                           "Confirm Password: ${_confirmpasswordController.text}");
                     }
                   },
-                  child: const Text("Sign Up"),
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 32, vertical: 12),
                   ),
+                  child: const Text("Sign Up"),
                 ),
               ),
             ],

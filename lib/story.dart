@@ -9,7 +9,7 @@ class StoryShow extends StatefulWidget {
   final String music;
   final String avatar;
 
-  StoryShow({
+  const StoryShow({super.key, 
     required this.image,
     required this.userName,
     required this.time,
@@ -87,7 +87,7 @@ class _StoryShowState extends State<StoryShow> {
                     backgroundColor: Colors.white24,
                     color: Colors.white,
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -96,13 +96,13 @@ class _StoryShowState extends State<StoryShow> {
                           CircleAvatar(
                             backgroundImage: AssetImage(widget.avatar),
                           ),
-                          SizedBox(width: 8),
+                          const SizedBox(width: 8),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 widget.userName,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -110,7 +110,7 @@ class _StoryShowState extends State<StoryShow> {
                               ),
                               Text(
                                 widget.time,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white70,
                                   fontSize: 12,
                                 ),
@@ -122,11 +122,11 @@ class _StoryShowState extends State<StoryShow> {
                       Row(
                         children: [
                           IconButton(
-                            icon: Icon(Icons.more_vert, color: Colors.white),
+                            icon: const Icon(Icons.more_vert, color: Colors.white),
                             onPressed: () {},
                           ),
                           IconButton(
-                            icon: Icon(Icons.close, color: Colors.white),
+                            icon: const Icon(Icons.close, color: Colors.white),
                             onPressed: () {
                               Navigator.pop(context);
                             },
@@ -144,7 +144,7 @@ class _StoryShowState extends State<StoryShow> {
               left: 70,
               child: Text(
                 widget.music,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 12,
                 ),
@@ -158,7 +158,7 @@ class _StoryShowState extends State<StoryShow> {
               child: Column(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(25),
@@ -180,7 +180,7 @@ class _StoryShowState extends State<StoryShow> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

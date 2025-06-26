@@ -35,12 +35,12 @@ class MyAppHome extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Messenger(),
+                  builder: (context) => const Messenger(),
                 ),
               );
             },
             icon:
-                FaIcon(FontAwesomeIcons.facebookMessenger, color: Colors.blue),
+                const FaIcon(FontAwesomeIcons.facebookMessenger, color: Colors.blue),
           ),
           const SizedBox(width: 10),
         ],
@@ -48,7 +48,7 @@ class MyAppHome extends StatelessWidget {
       body: ListView(
         children: [
           // Top navigation bar
-          Container(
+          SizedBox(
             height: 50,
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -80,21 +80,21 @@ class MyAppHome extends StatelessWidget {
 
           // Post input field
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: Row(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   backgroundImage: AssetImage('assets/images/profile.png'),
                   radius: 20,
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: "What's on your mind, Sanjay?",
-                      hintStyle: TextStyle(
-                          color: const Color.fromARGB(255, 204, 204, 204)),
-                      suffixIcon: Icon(Icons.image_rounded, color: Colors.grey),
+                      hintStyle: const TextStyle(
+                          color: Color.fromARGB(255, 204, 204, 204)),
+                      suffixIcon: const Icon(Icons.image_rounded, color: Colors.grey),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                         borderSide: BorderSide.none,
@@ -106,14 +106,14 @@ class MyAppHome extends StatelessWidget {
                 ),
                 CircleAvatar(
                   backgroundColor: Colors.grey[200],
-                  child: Icon(Icons.search, color: Colors.black),
+                  child: const Icon(Icons.search, color: Colors.black),
                 ),
               ],
             ),
           ),
 
           // Options like Reels, Room, Group, Live
-          Container(
+          SizedBox(
             height: 50,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -127,7 +127,7 @@ class MyAppHome extends StatelessWidget {
           ),
 
           // Story section
-          Container(
+          SizedBox(
             height: 270,
             child: ListView(
               scrollDirection: Axis.horizontal,
@@ -143,14 +143,14 @@ class MyAppHome extends StatelessWidget {
               ],
             ),
           ),
-          Divider(
+          const Divider(
             thickness: 1,
           ),
           // Post Section
           Expanded(
             child: ListView(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               children: [
                 _buildPost(
                   "Deven mestry is with Mahesh Joshi.",
@@ -172,10 +172,10 @@ class MyAppHome extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(icon, color: color),
-        SizedBox(height: 4),
+        const SizedBox(height: 4),
         Text(
           label,
-          style: TextStyle(fontSize: 12, color: Colors.black),
+          style: const TextStyle(fontSize: 12, color: Colors.black),
         ),
       ],
     );
@@ -233,7 +233,7 @@ class MyAppHome extends StatelessWidget {
                         BoxShadow(
                           color: Colors.black.withOpacity(0.2),
                           blurRadius: 5,
-                          offset: Offset(0, 3),
+                          offset: const Offset(0, 3),
                         ),
                       ],
                       border: Border.all(color: Colors.blue, width: 2),
@@ -249,7 +249,7 @@ class MyAppHome extends StatelessWidget {
                 Positioned(
                   bottom:
                       -25, // Place the "Add" icon in the center below the image
-                  child: Container(
+                  child: SizedBox(
                     width: 50,
                     height: 50,
                     child: Center(
@@ -288,11 +288,11 @@ class MyAppHome extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 backgroundImage: AssetImage('assets/images/img4.png'),
                 radius: 20,
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
